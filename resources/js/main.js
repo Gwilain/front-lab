@@ -1,5 +1,5 @@
-import { initColorTheme } from './resources/js/colorTheme.js';
-import { initLayout } from './resources/js/layout.js';
+import { initColorTheme } from './colorTheme.js';
+import { initLayout } from './layout.js';
 
 document.addEventListener('DOMContentLoaded', init);
 
