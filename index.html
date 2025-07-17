@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghislain Gillet - Développeur full stack - portfolio</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+    <header>
+        <div id="head">
+          <div id="colorPlayer">
+            <svg id="back" class="btns inactive" width="40" height="40" viewBox="0 0 50 50" fill="currentColor" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="36,4 36,36 4,20"  />
+            </svg>
+          
+            <svg id="forward" class="btns" width="40" height="40" viewBox="0 0 50 50" fill="currentColor" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="4,4 4,36 36,20"  />
+            </svg>
+          
+          </div>
+          <p id="colors">#0faff6 - #191408 -- Ratio de contraste - 7.41 - AAA</p>
+          
+          <div id="countDown" class="btns">
+            <span id="cd1">30</span>
+              <svg id="pie">
+                  <defs>
+                      <mask class="progress"  id="circleMask">
+                          <circle 
+                              class="progress" 
+                              cx="20" cy="20" r="10" 
+                              fill="none"
+                              stroke="white"
+                              stroke-width="20"
+                          /> 
+                      </mask>
+                    </defs>
+              </svg>
+              <div id="disk"></div>        
+              <span id="cd2">30</span>
+          </div>
+        </div>
+
+        <ul id="thmeesBtns" class="btns">
+        </ul>
+      </header>
+      <main>
+          <section id="presentation" class="marginTop-m">
+            <div class="col">
+              <h2 id="verticalText">FRONT</h2>
+            </div>
+            <div id="presentationContent">
+              <!-- <h1><span id="firstname">GHISLAIN</span><span id="name">GILLET</span></h1> -->
+              <h1>LAB</h1>
+              <!-- <h1>EXPÉRIMENTATIONS</h1> -->
+              
+                <p class="marginTop-s">Voici quelques expérimentations front. Cette page aux couleurs aléatoires accessibles, étant elle-même une expérimentation.</p><p> 
+Les autres projets sont pour l'instant des choses que j'avais codées en Flash à l'époque ou des principes sur lesquels j'avais travaillé côté design ou seulement en animation. J'espère pouvoir alimenter cette page régulièrement (j'ai plein de petites choses en cours mais trop peu de temps pour tout finaliser).</p>    
+             
+ 
+             
+            </div>
+          </section>
+          <section >
+              <ul id="cardsContainer" class="marginTop-s">
+                <li>
+                  <a href="exp/ropes/">
+                    <img src="resources/images/threads.jpg" >
+                    <h2>ROPES</h2>
+                    <p>Il s'agissait ici avec cette expérimentation de recréé un principe d'UI que j'avais créé et codé en 2009 en Flash pour la table multitouche de Fontevraud que nous avions réalisé à Mazedia. L'idée était de relier les contenus à un endroit grâce à des fils.</p>
+                    <p>Chaque lien est basé sur une série de "baguettes" virtuelle un peu comme un mètre pliant. Elles se positionnent les unes par rapport aux autres grâce à un algorithme de cinématique inverse puis le lien est dessiné via l'API du canvas en passant simplement par le milieu de chaque baguette.</p>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="exp/ants/">
+                  <img src="resources/images/ants.jpg" >
+                  <h2>ANTS</h2>
+                  <p>En faisant le Codepen Challenge de Mars 2025 sur le thème des insectes, j'ai recréé sans tout de suite m'en apercevoir une fonctionnalité de l'application Fourmi basée sur le livre d'Olivier Douzou que nous avions réalisé à Opixido en 2012 (je ne m'étais occupé que des animations dans un tout autre style).</p>
+                  <p>L'idée de cette petite expérimentation était surtout de m'intéresser à la programmation orientée objet en javascript en créant ces entités qui s'évitent les une les autres. C'était aussi l'occasion de travailler avec un workflow 3D -> spritesheet.</p>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="exp/zombies/">
+                    <img src="resources/images/zombies.jpg" >
+                    <h2>ZOMBIES CAR SMASH</h2>
+                    <p>En 2010, avec un petit groupe de collègues nous avions créé une carte de vœux non officiel sous forme de mini jeu Flash ou l'utilisateur avait la tâche poétique d'écraser un nombre défini de zombies au sein d'un décor (je n'étais occupé que du code).</p>
+                    <p>j'ai porté les parties du code concernant les zombies et la voiture d'AS3 à js, il s'agissait pour moi de tester les différences comme les similitudes des deux langages.</p>
+                  </a>
+                </li>
+              </ul>
+
+          </section>
+      <script type="module" src="resources/js/main.js"></script>
+</body>
+</html>
