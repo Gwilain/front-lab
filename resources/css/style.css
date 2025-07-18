@@ -25,12 +25,17 @@
     font-family: "Barlow", sans-serif;
     background-color: var(--color-bg);
     color: var(--color-text);
-    transition: background-color 2s ease, color 2s ease;
+    /* transition: background-color 2s ease, color 2s ease; */
     overflow-x :hidden; 
     display: flex;
     flex-direction: column;
     font-size: var(--m);
     font-weight:400;
+}
+
+*{
+ transition: border-color 2s ease ,background-color 2s ease, color 2s ease, box-shadow 2s ease;
+
 }
 
 
@@ -160,7 +165,7 @@ header #head{
    border-radius: 20px;
    mask: url(#circleMask); -webkit-mask: url(#circleMask);
 
-   transition: background-color 2s ease, color 2s ease;
+   /* transition: background-color 2s ease, color 2s ease; */
 }
 
 
@@ -182,7 +187,7 @@ header #head{
 #cd2{
     color:var(--color-bg);
     mask: url(#circleMask); -webkit-mask: url(#circleMask);
-    transition: color 2s ease, color 2s ease;
+    /* transition: color 2s ease, color 2s ease; */
 }
 
 /* .col {
@@ -199,9 +204,7 @@ header #head{
 main {
   flex:1;
   max-width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: space-between; */
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -261,6 +264,10 @@ h1{
   color: var(--color-bg);
 }
 
+#projets{
+   margin-top: var(--xl);
+}
+
  #cardsContainer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -274,12 +281,12 @@ h1{
   border-radius: var(--s);
   padding: var(--m);
   box-shadow: 0 0 0 var(--color-text);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 2s ease;
 }
 
 #cardsContainer li:hover{
-  transform: translateY( calc(var(--l) * -1 )); /* translateX( 1px ) */
-  box-shadow: -0 var(--l) 0 var(--color-text);
+  transform: translateY( calc(var(--m) * -1 )); /* translateX( 1px ) */
+  box-shadow: -0 var(--m) 0 var(--color-text);
 }
 
 #cardsContainer li img{
@@ -294,3 +301,55 @@ h1{
 
 
 
+#cardsContainer li h3 {
+  display: inline-block;     
+  position: relative;        
+  font-size: xx-large;
+  margin-top: 0.05rem;
+}
+
+#cardsContainer li h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 4px;
+  width: 100%;
+  background-color: var(--color-text);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease, background-color 2s ease;
+}
+
+#cardsContainer li a:hover h3::after {
+  transform: scaleX(1);
+}
+
+#cardsContainer li a:hover h3 {
+  color: var(--color-text); /* Si tu veux changer la couleur aussi */
+}
+
+
+@media screen and (max-width: 1200px) {
+   #cardsContainer{
+   
+    grid-template-columns: repeat(2, 1fr);
+   
+   }
+
+   main {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+   #cardsContainer{
+   
+    grid-template-columns: repeat(1, 1fr);
+   
+   }
+
+   main {
+    max-width: 90%;
+  }
+}
