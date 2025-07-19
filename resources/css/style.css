@@ -3,7 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -245,6 +245,11 @@ main {
   font-size:80px;
   line-height: 1;
   font-weight: 900;
+  /* background-color: green; */
+}
+
+#presentationContent{
+  /* background-color: red; */
 }
 
 h1{
@@ -342,7 +347,7 @@ h1{
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
    #cardsContainer{
    
     grid-template-columns: repeat(1, 1fr);
