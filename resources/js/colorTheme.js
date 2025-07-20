@@ -139,8 +139,13 @@ function generateColors() {
   }
 
   const score = getContrastScore(ratio);
+  if(window.devicePixelRatio>1){
 
-  document.getElementById("colors").innerHTML = `<span class="colorTxt">${hex1}</span>  -  <span class="colorTxt">${hex2}</span> -- Ratio de contraste - ${ratio.toFixed(2)} - <span class="colorTxt">${score}</span>`;
+    document.getElementById("colors").innerHTML = `contraste : ${ratio.toFixed(2)} -<span class="colorTxt">${score}</span>`;
+  }else{
+
+    document.getElementById("colors").innerHTML = `<span class="colorTxt">${hex1}</span>  -  <span class="colorTxt">${hex2}</span> - contraste : ${ratio.toFixed(2)} -<span class="colorTxt">${score}</span>`;
+  }
 
   return [hex1, hex2];
 

@@ -41,7 +41,6 @@ function ajustVertText(){
     let viewportWidth = window.visualViewport?.width || window.innerWidth;
 
     if (parentWidth > viewportWidth / 4) {
-        console.log("Le texte prend plus d'un quart de la page");
 
         vertText.parentElement.style.width = (4 * rem) + 'px';
         vertText.style.fontSize = "4rem";
